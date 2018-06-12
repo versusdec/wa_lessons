@@ -1,0 +1,86 @@
+@import './grid.scss';
+@import './variables';
+@import './mixins';
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+body {
+    background-image: url('../assets/images/pattern.jpg');
+}
+
+.content {
+    max-width: $max_page_width;
+    width: 100%;
+    @include absolute-positioning;
+    display: block;
+    @media screen and (max-width: 575px) {
+            height: 100%;
+    }
+    .header {
+        color: #fff;
+        padding: 8px;
+    }
+    .grid {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .item {
+            height: 150px;
+            position: relative;
+            padding: 8px;
+            &__content {
+                height: 100%;
+                width: 100%;
+                position: relative;
+            }
+            &__icon {
+                @include absolute-positioning;
+            }
+            &__title {
+                left: 0;
+                bottom: 0;
+                position: absolute;
+                padding: 0.4rem;
+                color: #fff;
+            }
+            .home {
+                background-color: #3387ea;
+            }
+            .contact {
+                background-color: #f9be3e;
+            }
+            .hire {
+                background-color: #d3573e;
+            }
+            .photos {
+                background-color: #59b0e2;
+            }
+            .about {
+                background-color: #33af95;
+            }
+            .portfolio {
+                background-color: #86a73f;
+            }
+            .blog {
+                background-color: #151a26;
+                display: flex;
+                &__icon {
+                    height: 100%;
+                }
+                &__title {
+                    color: #fff;
+                    font-size: 1.8rem;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 0.5rem;
+                }
+            }
+            .chat {
+                background-color: #7e5b8c;
+            }
+        }
+    }
+}
