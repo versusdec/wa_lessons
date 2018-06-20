@@ -10,7 +10,7 @@ function isEmpty(obj) {
 
 someObject.someKey = 'somekey';
 
-isEmpty(someObject);
+alert (isEmpty(someObject));
 
 
 
